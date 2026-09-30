@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Karl Fashion - Checkout</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="CSS/css/all.min.css">
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #444;
+            background: #fff;
+        }
+
+        /* =========================
+           CHECKOUT SECTION
+        ========================= */
+
+        .checkout-section {
+            margin-top: 60px;
+            margin-bottom: 80px;
+        }
+
+        .checkout-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .checkout-subtitle {
+            color: #999;
+            margin-bottom: 55px;
+        }
+
+        /* =========================
+           FORM
+        ========================= */
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .required {
+            color: #ff084e;
+        }
+
+        .checkout-input {
+            width: 100%;
+            height: 52px;
+            border: none;
+            outline: none;
+            background: #f5f3f7;
+            padding: 0 13px;
+            color: #555;
+        }
+
+        /* =========================
+           ORDER BOX
+        ========================= */
+
+        .order-box {
+            border: 1px solid #ddd;
+            padding: 40px;
+        }
+
+        .order-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .order-subtitle {
+            color: #999;
+            margin-bottom: 70px;
+        }
+
+        .order-heading {
+            display: flex;
+            justify-content: space-between;
+
+            font-size: 12px;
+            padding-bottom: 30px;
+
+            border-bottom: 1px solid #ddd;
+        }
+
+        .order-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            font-size: 12px;
+
+            padding: 32px 0;
+
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* =========================
+           PAYMENT
+        ========================= */
+
+        .payment-options {
+            padding-top: 30px;
+        }
+
+        .payment-option {
+            margin-bottom: 22px;
+
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .payment-description {
+            color: #999;
+
+            font-size: 12px;
+            line-height: 2;
+
+            margin: 35px 20px 55px;
+        }
+
+        /* =========================
+           PLACE ORDER
+        ========================= */
+
+        .place-order-btn {
+            width: 100%;
+
+            border: none;
+
+            background: #ff084e;
+            color: white;
+
+            padding: 18px;
+
+            font-size: 15px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .place-order-btn:hover {
+            background: #222;
+        }
+
+        /* =========================
+           CHECKBOX
+        ========================= */
+
+        .check-option {
+            margin-top: 25px;
+
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 991px) {
+
+            .order-box {
+                margin-top: 50px;
+            }
+
+        }
+
+        @media (max-width: 575px) {
+
+            .order-box {
+                padding: 25px;
+            }
+
+            .checkout-section {
+                margin-top: 30px;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+     CHECKOUT
+========================================= -->
+
+    <div class="container checkout-section">
+
+        <div class="row">
+
+
+            <!-- =====================================
+             BILLING ADDRESS
+        ====================================== -->
+
+            <div class="col-lg-7 col-md-12 pr-lg-5">
+
+
+                <h2 class="checkout-title">
+                    BILLING ADDRESS
+                </h2>
+
+                <p class="checkout-subtitle">
+                    Enter your billing details
+                </p>
+
+
+                <form>
+
+
+                    <!-- FIRST NAME + LAST NAME -->
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+
+                            <div class="form-group">
+
+                                <label class="form-label">
+
+                                    FIRST NAME
+                                    <span class="required">*</span>
+
+                                </label>
+
+                                <input type="text" class="checkout-input" required>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <div class="form-group">
+
+                                <label class="form-label">
+
+                                    LAST NAME
+                                    <span class="required">*</span>
+
+                                </label>
+
+                                <input type="text" class="checkout-input" required>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- COMPANY NAME -->
+
+                    <div class="form-group">
+
+                        <label class="form-label">
+                            COMPANY NAME
+                        </label>
+
+                        <input type="text" class="checkout-input">
+
+                    </div>
+
+
+                    <!-- COUNTRY -->
+
+                    <div class="form-group">
+
+                        <label class="form-label">
+
+                            COUNTRY
+                            <span class="required">*</span>
+
+                        </label>
+
+                        <select class="checkout-input" required>
+
+                            <option value="">
+                                Select Country
+                            </option>
+
+                            <option>
+                                India
+                            </option>
+
+                            <option>
+                                United States
+                            </option>
+
+                            <option>
+                                United Kingdom
+                            </option>
+
+                            <option>
+                                Canada
+                            </option>
+
+                            <option>
+                                Australia
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- ADDRESS -->
+
+                    <div class="form-group">
+
+                        <label class="form-label">
+
+                            ADDRESS
+                            <span class="required">*</span>
+
+                        </label>
+
+                        <input type="text" class="checkout-input mb-3" placeholder="Street address" required>
+
+
+                        <input type="text" class="checkout-input" placeholder="Apartment, suite, unit etc.">
+
+                    </div>
+
+
+                    <!-- POSTCODE -->
+
+                    <div class="form-group">
+
+                        <label class="form-label">
+
+                            POSTCODE
+                            <span class="required">*</span>
+
+                        </label>
+
+                        <input type="text" class="checkout-input" required>
+
+                    </div>
+
+
+                    <!-- TOWN / CITY -->
+
+                    <div class="form-group">
+
+                        <label class="form-label">
+
+                            TOWN/CITY
+                            <span class="required">*</span>
+
+                        </label>
+
+                        <input type="text" class="checkout-input" required>
+
+                    </div>
+
+
+                    <!-- PROVINCE -->
+
+                    <div class="form-group">
+
+                        <label class="form-label">
+
+                            PROVINCE
+                            <span class="required">*</span>
+
+                        </label>
+
+                        <input type="text" class="checkout-input" required>
+
+                    </div>
+
+
+                    <!-- PHONE -->
+
+                    <div class="form-group">
+
+                        <label class="form-label">
+
+                            PHONE NO
+                            <span class="required">*</span>
+
+                        </label>
+
+                        <input type="tel" class="checkout-input" required>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label class="form-label">
+
+                            EMAIL ADDRESS
+                            <span class="required">*</span>
+
+                        </label>
+
+                        <input type="email" class="checkout-input" required>
+
+                    </div>
+
+
+                    <!-- TERMS -->
+
+                    <div class="custom-control custom-checkbox check-option">
+
+                        <input type="checkbox" class="custom-control-input" id="terms" required>
+
+                        <label class="custom-control-label" for="terms">
+
+                            TERMS AND CONDITIONS
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- ACCOUNT -->
+
+                    <div class="custom-control custom-checkbox check-option">
+
+                        <input type="checkbox" class="custom-control-input" id="account">
+
+                        <label class="custom-control-label" for="account">
+
+                            CREATE AN ACCOUNT
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- NEWSLETTER -->
+
+                    <div class="custom-control custom-checkbox check-option">
+
+                        <input type="checkbox" class="custom-control-input" id="newsletter">
+
+                        <label class="custom-control-label" for="newsletter">
+
+                            SUBSCRIBE TO OUR NEWSLETTER
+
+                        </label>
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+
+            <!-- =====================================
+             YOUR ORDER
+        ====================================== -->
+
+            <div class="col-lg-5 col-md-12">
+
+
+                <div class="order-box">
+
+
+                    <h2 class="order-title">
+                        YOUR ORDER
+                    </h2>
+
+
+                    <p class="order-subtitle">
+                        The Details
+                    </p>
+
+
+                    <!-- PRODUCT / TOTAL -->
+
+                    <div class="order-heading">
+
+                        <span>
+                            PRODUCT
+                        </span>
+
+                        <span>
+                            TOTAL
+                        </span>
+
+                    </div>
+
+
+                    <!-- PRODUCT -->
+
+                    <div class="order-row">
+
+                        <span>
+                            COCKTAIL YELLOW DRESS
+                        </span>
+
+                        <span>
+                            $59.90
+                        </span>
+
+                    </div>
+
+
+                    <!-- SUBTOTAL -->
+
+                    <div class="order-row">
+
+                        <span>
+                            SUBTOTAL
+                        </span>
+
+                        <span>
+                            $59.90
+                        </span>
+
+                    </div>
+
+
+                    <!-- SHIPPING -->
+
+                    <div class="order-row">
+
+                        <span>
+                            SHIPPING
+                        </span>
+
+                        <span>
+                            FREE
+                        </span>
+
+                    </div>
+
+
+                    <!-- TOTAL -->
+
+                    <div class="order-row">
+
+                        <strong>
+                            TOTAL
+                        </strong>
+
+                        <strong>
+                            $59.90
+                        </strong>
+
+                    </div>
+
+
+                    <!-- =================================
+                     PAYMENT METHODS
+                ================================== -->
+
+                    <div class="payment-options">
+
+
+                        <!-- PAYPAL -->
+
+                        <div class="custom-control custom-radio payment-option">
+
+                            <input type="radio" class="custom-control-input" id="paypal" name="payment" checked>
+
+                            <label class="custom-control-label" for="paypal">
+
+                                PAYPAL
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- CASH ON DELIVERY -->
+
+                        <div class="custom-control custom-radio payment-option">
+
+                            <input type="radio" class="custom-control-input" id="cash" name="payment">
+
+                            <label class="custom-control-label" for="cash">
+
+                                CASH ON DELIVERY
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- CREDIT CARD -->
+
+                        <div class="custom-control custom-radio payment-option">
+
+                            <input type="radio" class="custom-control-input" id="credit" name="payment">
+
+                            <label class="custom-control-label" for="credit">
+
+                                CREDIT CARD
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- BANK TRANSFER -->
+
+                        <div class="custom-control custom-radio payment-option">
+
+                            <input type="radio" class="custom-control-input" id="bank" name="payment">
+
+                            <label class="custom-control-label" for="bank">
+
+                                DIRECT BANK TRANSFER
+
+                            </label>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- PAYMENT DESCRIPTION -->
+
+                    <p class="payment-description">
+
+                        Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit.
+                        Est cum autem eveniet saepe fugit,
+                        impedit magni.
+
+                    </p>
+
+
+                    <!-- PLACE ORDER -->
+
+                    <button type="submit" class="place-order-btn">
+
+                        PLACE ORDER
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

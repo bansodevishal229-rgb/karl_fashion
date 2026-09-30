@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shope</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="..//CSS/css/all.min.css">
+    <style>
+        .wraper {
+            border: 1px solid red;
+        }
+
+        .logo {
+            margin-bottom: 10px;
+        }
+
+        .lines3 {
+            float: right;
+            padding: 10px;
+            color: white;
+            background-color: black;
+            border-radius: 40px;
+            font-size: 30px;
+        }
+
+        .lines3:hover {
+            background-color: #ff084e;
+        }
+
+        .navbar {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+
+        .help-line {
+            background-color: #ff084e;
+            color: #fff;
+
+            /* padding-left: 40px;
+            padding-right: 40px; */
+
+
+        }
+
+        .help-line:hover {
+            background-color: black;
+            color: #fff;
+
+        }
+
+        .div1 {
+            background-color: rgb(163, 156, 156);
+        }
+
+        .div2 {
+            background-color: #ff084e;
+
+        }
+
+        /* CART */
+        .cart-section {
+            margin-top: 50px;
+            margin-bottom: 80px;
+        }
+
+        .cart-header {
+            background: #f5f3f7;
+            padding: 15px 12px;
+            text-transform: capitalize;
+        }
+
+        .cart-product-row {
+            min-height: 210px;
+            padding: 10px 0;
+        }
+
+        .cart-product-img {
+            width: 120px;
+            height: 175px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .product-name {
+            color: #555;
+            font-size: 14px;
+        }
+
+        .quantity-box {
+            display: flex;
+            width: 110px;
+            height: 32px;
+            background: #f5f5f5;
+        }
+
+        .quantity-box button {
+            width: 35px;
+            border: 0;
+            background: transparent;
+            font-weight: bold;
+        }
+
+        .quantity-box input {
+            width: 40px;
+            border: 0;
+            background: transparent;
+            text-align: center;
+        }
+
+
+        /* CART BUTTONS */
+
+        .cart-buttons {
+            margin-top: 20px;
+            margin-bottom: 65px;
+        }
+
+        .continue-shopping {
+            display: inline-block;
+            padding: 15px 30px;
+            border: 2px solid #333;
+            color: #111;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .continue-shopping:hover {
+            color: #fff;
+            background: #ff084e;
+            border-color: #ff084e;
+            text-decoration: none;
+        }
+
+        .clear-cart,
+        .update-cart {
+            padding: 15px 30px;
+            border: 1px solid #eee;
+            font-weight: bold;
+        }
+
+        .clear-cart {
+            background: #fff;
+            color: #888;
+        }
+
+        .update-cart {
+            background: #f5f3f7;
+            color: #888;
+        }
+
+
+        /* BOTTOM */
+
+        .cart-bottom h4 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .subtitle {
+            color: #888;
+            margin-top: 10px;
+            margin-bottom: 50px;
+        }
+
+
+        /* COUPON */
+
+        .coupon-box {
+            display: flex;
+            height: 53px;
+        }
+
+        .coupon-box input {
+            width: 65%;
+            border: none;
+            outline: none;
+            padding-left: 30px;
+            background: #f5f3f7;
+        }
+
+        .coupon-box button {
+            width: 35%;
+            border: none;
+            background: #ff084e;
+            color: white;
+            font-weight: bold;
+        }
+
+
+        /* SHIPPING */
+
+        .shipping-option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 22px;
+            color: #555;
+        }
+
+
+        /* CART TOTAL */
+
+        .cart-total {
+            background: #f5f3f7;
+            padding: 30px 30px 0;
+        }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 25px;
+            color: #444;
+        }
+
+        .total-row.total {
+            font-size: 17px;
+        }
+
+        .checkout-btn {
+            width: calc(100% + 60px);
+            margin-left: -30px;
+            border: none;
+            background: #ff084e;
+            color: white;
+            padding: 20px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 767px) {
+
+            .cart-header {
+                display: none;
+            }
+
+            .cart-product-row {
+                text-align: center;
+            }
+
+            .cart-product-row>div {
+                margin-bottom: 20px;
+            }
+
+            .cart-product-img {
+                width: 100px;
+                height: 145px;
+            }
+
+            .cart-buttons {
+                text-align: center;
+            }
+
+            .continue-shopping {
+                margin-bottom: 20px;
+            }
+
+            .cart-buttons .text-right {
+                text-align: center !important;
+            }
+
+            .clear-cart,
+            .update-cart {
+                margin: 5px;
+            }
+
+            .cart-bottom>div {
+                margin-bottom: 50px;
+            }
+
+        }
+
+        .footer {
+            border: 1px solid black;
+        }
+
+        .footer_icon {
+            font-size: 30px;
+            margin-bottom: 40px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid wraper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 logo">
+                    <div class="row">
+                        <div class="col-12 text-center mt-5">
+                            <img src="images/karllogo.png" alt="">
+
+
+                            <a href="#"><i class="fas fa-stream lines3"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-dark navbar-expand-md">
+
+                        <i class="fab fa-twitter mr-4"></i>
+                        <i class="fab fa-facebook mr-4"></i>
+                        <i class="fab fa-linkedin mr-4"></i>
+                        <i class="fab fa-whatsapp-square mr-4"></i>
+
+
+                        <button class="navbar-toggler" data-toggle="collapse" data-target="#menu1">
+                            <span class="navbar-toggler-icon bg-dark"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center" id="menu1">
+                            <ul class="navbar-nav mx-auto ">
+                                <li class="nav-item"><a class="nav-link text-dark font-weight-bolder"
+                                     href="home.html">HOME</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark font-weight-bolder"
+                                       href="products.html">
+                                        PRODUCT
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-dark font-weight-bolder" href="#"
+                                        data-toggle="dropdown">
+                                        PAGES
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <ul class="list-unstyled">
+                                            <li class="dropdown-item"><a href="home.html"
+                                                    class="text-dark font-weight-bolder text-decoration-none">HOME</a>
+                                            </li>
+                                            <li class="dropdown-item"><a href="shope.html"
+                                                    class="text-dark font-weight-bolder text-decoration-none">CATEGORY</a>
+                                            </li>
+                                            <li class="dropdown-item"><a href="productdetails.html"
+                                                    class="text-dark font-weight-bolder text-decoration-none">PRODUCT
+                                                    DETAILS</a>
+                                            </li>
+                                            <li class="dropdown-item"><a href="cart.html"
+                                                    class="text-dark font-weight-bolder text-decoration-none">CARD</a>
+                                            </li>
+                                            <li class="dropdown-item"><a href="chekout.html"
+                                                    class="text-dark font-weight-bolder text-decoration-none">CHECKOUT</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-item"><a class="nav-link text-dark font-weight-bolder"
+                                        href="shope.html">CATEGORY</a></li>
+                               
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-dark font-weight-bolder"
+                                        data-toggle="dropdown" href="#">
+                                        CONTACT
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <ul class="list-unstyled">
+                                            <li class="dropdown-item"><a href="#">Mb:8767875437</a></li>
+                                            <li class="dropdown-item"><a href="#">email:karlfashion@gmail.com</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                        <a href="#" class="help-line text-center text-decoration-none pt-2 pb-2 pl-4 pr-4">
+                            <i class="fas fa-headset">+87687885</i>
+                        </a>
+
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row mb-2 text-white div3">
+                        <div class="col-lg-4 div1 p-4">
+                            <h4>Free Shipping & Returns</h4>
+                            <p> BUY NOW</p>
+                        </div>
+                        <div class="col-lg-4 div2 p-4">
+                            <h4>20% Discount for all dresses</h4>
+                            <p>USE CODE: Colorlib</p>
+                        </div>
+                        <div class="col-lg-4 bg-dark p-4">
+                            <h4>30% Discount for students</h4>
+                            <p>USE CODE: Colorlib</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container cart-section">
+
+            <div class="row cart-header font-weight-bold">
+
+                <div class="col-lg-7 col-md-6">
+                    Product
+                </div>
+
+                <div class="col-lg-2 col-md-2 text-center">
+                    Price
+                </div>
+
+                <div class="col-lg-2 col-md-2 text-center">
+                    Quantity
+                </div>
+
+                <div class="col-lg-1 col-md-2 text-center">
+                    Total
+                </div>
+
+            </div>
+
+
+            <div class="row cart-product-row align-items-center">
+
+                <div class="col-lg-7 col-md-6">
+
+                    <div class="d-flex align-items-center">
+
+                        <img src="images/yellow.jpg" class="cart-product-img" alt="Yellow Cocktail Dress">
+
+                        <span class="product-name">
+                            Yellow Cocktail Dress
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-2 col-md-2 text-center">
+
+                    <span>
+                        rs 549.88
+                    </span>
+
+                </div>
+
+
+                <div class="col-lg-2 col-md-2">
+
+                    <div class="quantity-box mx-auto">
+
+                        <button type="button">
+                            −
+                        </button>
+
+                        <input type="text" value="1" readonly>
+
+                        <button type="button">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-1 col-md-2 text-center">
+
+                    <span>
+                        rs 549.88
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="row cart-buttons">
+
+                <div class="col-lg-6 col-md-6">
+
+                    <a href="shope.html" class="continue-shopping">
+                        CONTINUE SHOPPING
+                    </a>
+
+                </div>
+
+
+                <div class="col-lg-6 col-md-6 text-right">
+
+                    <button class="clear-cart">
+                        CLEAR CART
+                    </button>
+
+                    <button class="update-cart">
+                        UPDATE CART
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="row cart-bottom">
+
+
+                <div class="col-lg-4 col-md-4">
+
+                    <h4>
+                        CUPON CODE
+                    </h4>
+
+                    <p class="subtitle">
+                        Enter your coupon code
+                    </p>
+
+
+                    <div class="coupon-box">
+
+                        <input type="text" placeholder="#569ab15">
+
+                        <button>
+                            APPLY
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-4 col-md-4">
+
+                    <h4>
+                        SHIPPING METHOD
+                    </h4>
+
+                    <p class="subtitle">
+                        Select the one you want
+                    </p>
+
+
+                    <div class="shipping-option">
+
+                        <div class="custom-control custom-radio">
+
+                            <input type="radio" class="custom-control-input" id="nextday" name="shipping">
+
+                            <label class="custom-control-label" for="nextday">
+                                Next day delivery
+                            </label>
+
+                        </div>
+
+                        <span>
+                            rs 4.99
+                        </span>
+
+                    </div>
+
+
+                    <div class="shipping-option">
+
+                        <div class="custom-control custom-radio">
+
+                            <input type="radio" class="custom-control-input" id="standard" name="shipping" checked>
+
+                            <label class="custom-control-label" for="standard">
+                                Standard delivery
+                            </label>
+
+                        </div>
+
+                        <span>
+                            rs 6.99
+                        </span>
+
+                    </div>
+
+
+                    <div class="shipping-option">
+
+                        <div class="custom-control custom-radio">
+
+                            <input type="radio" class="custom-control-input" id="pickup" name="shipping">
+
+                            <label class="custom-control-label" for="pickup">
+                                Personal Pickup
+                            </label>
+
+                        </div>
+
+                        <span>
+                            Free
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-4 col-md-4">
+
+                    <h4>
+                        CART TOTAL
+                    </h4>
+
+                    <p class="subtitle">
+                        Final info
+                    </p>
+
+
+                    <div class="cart-total">
+
+                        <div class="total-row">
+
+                            <span>
+                                Subtotal
+                            </span>
+
+                            <span>
+                                rs 549.90
+                            </span>
+
+                        </div>
+
+
+                        <div class="total-row">
+
+                            <span>
+                                Shipping
+                            </span>
+
+                            <span>
+                                Free
+                            </span>
+
+                        </div>
+
+
+                        <div class="total-row total">
+
+                            <strong>
+                                Total
+                            </strong>
+
+                            <strong>
+                                rs 549.90
+                            </strong>
+
+                        </div>
+
+
+                        <a href="chekout.html"><button class="checkout-btn">
+                            PROCEED TO CHECKOUT
+                        </button></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row border-light shadow">
+                        <div class="col-lg-4">
+                            <img src="images/karllogo.png" alt="" class="mt-2">
+                            <p class="mt-5">
+                                Copyright ©2026 All rights reserved |<br> Made with by Colorlib & distributed by
+                                ThemeWagon
+                            </p>
+                        </div>
+
+                        <div class="col-lg-2">
+                            <ul class="list-unstyled ">
+                                <li><a href="" class="text-dark text-decoration-none">About</a></li>
+                                <li><a href="" class="text-dark text-decoration-none">Blog</a></li>
+                                <li><a href="" class="text-dark text-decoration-none">Faq</a></li>
+                                <li><a href="" class="text-dark text-decoration-none">Returns</a></li>
+                                <li><a href="" class="text-dark text-decoration-none">Contact</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-2">
+                            <ul class="list-unstyled text-dark">
+                                <li><a href="#" class="text-dark text-decoration-none">My Account</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">Shipping</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">Our Policies</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">Affiliates</a></li>
+
+
+
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <h3>Subscribe to our newsletter</h3>
+                            <input type="email" placeholder="your email here">
+
+                            <button type="submit" class="btn btn-dark">Subscribe</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 d-flex justify-content-center footer_icon ">
+
+
+                            <i class="fab fa-twitter mr-5"></i>
+
+                            <i class="fab fa-facebook mr-5"></i>
+
+                            <i class="fab fa-linkedin mr-5"></i>
+
+                            <i class="fab fa-whatsapp mr-5"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

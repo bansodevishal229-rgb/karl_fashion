@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shope</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="..//CSS/css/all.min.css">
+    <style>
+        .wraper {
+            border: 1px solid red;
+        }
+
+        .logo {
+            margin-bottom: 10px;
+        }
+
+        .lines3 {
+            float: right;
+            padding: 10px;
+            color: white;
+            background-color: black;
+            border-radius: 40px;
+            font-size: 30px;
+        }
+
+        .lines3:hover {
+            background-color: #ff084e;
+        }
+
+        .navbar {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+
+        .help-line {
+            background-color: #ff084e;
+            color: #fff;
+
+            /* padding-left: 40px;
+            padding-right: 40px; */
+
+
+        }
+
+        .help-line:hover {
+            background-color: black;
+            color: #fff;
+
+        }
+
+        .div1 {
+            background-color: rgb(163, 156, 156);
+        }
+
+        .div2 {
+            background-color: #ff084e;
+
+        }
+
+        .main-image {
+            width: 100%;
+        }
+
+        .main-image img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .thumbnails img {
+            width: 100px;
+
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .thumbnails img:hover {
+            border-color: red;
+        }
+
+         .product_details {
+            margin-bottom: 50px;
+        }
+
+        .cart {
+            color: red;
+            font: bold;
+        }
+
+        .cart:hover {
+            color: black;
+        }
+
+        .shope {
+            color: white;
+            float: right;
+        }
+
+        .zoom-img {
+            transition: transform 0.5s ease;
+        }
+
+        .zoom-img:hover {
+            transform: scale(1.1);
+        }
+
+        .footer {
+            border: 1px solid black;
+        }
+
+        .footer_icon {
+            font-size: 30px;
+            margin-bottom: 40px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid wraper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 logo">
+                    <div class="row">
+                        <div class="col-12 text-center mt-5">
+                            <img src="images/karllogo.png" alt="">
+
+
+                            <a href="#"><i class="fas fa-stream lines3"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-dark navbar-expand-md">
+
+                        <i class="fab fa-twitter mr-4"></i>
+                        <i class="fab fa-facebook mr-4"></i>
+                        <i class="fab fa-linkedin mr-4"></i>
+                        <i class="fab fa-whatsapp-square mr-4"></i>
+
+
+                        <button class="navbar-toggler" data-toggle="collapse" data-target="#menu1">
+                            <span class="navbar-toggler-icon bg-dark"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center" id="menu1">
+                            <ul class="navbar-nav mx-auto ">
+                                <li class="nav-item"><a class="nav-link text-dark font-weight-bolder" href="home.html">HOME</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark font-weight-bolder"
+                                       href="products.html">
+                                        PRODUCT
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-dark font-weight-bolder" href="#"
+                                        data-toggle="dropdown">
+                                        PAGES
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <ul class="list-unstyled">
+                                            <li class="dropdown-item"><a href="home.html"
+                                                    class="text-dark font-weight-bolder text-decoration-none">HOME</a>
+                                            </li>
+                                            <li class="dropdown-item"><a href="shope.html"
+                                                    class="text-dark font-weight-bolder text-decoration-none">CATEGORY</a>
+                                            </li>
+                                            <li class="dropdown-item"><a href="productdetails.html"
+                                                    class="text-dark font-weight-bolder text-decoration-none">PRODUCT
+                                                    DETAILS</a>
+                                            </li>
+                                            <li class="dropdown-item"><a href="cart.html"
+                                                    class="text-dark font-weight-bolder text-decoration-none">CARD</a>
+                                            </li>
+                                            <li class="dropdown-item"><a href="chekout.html"
+                                                    class="text-dark font-weight-bolder text-decoration-none">CHECKOUT</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-item"><a class="nav-link text-dark font-weight-bolder"
+                                        href="shope.html">CATEGORY</a></li>
+                               
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-dark font-weight-bolder"
+                                        data-toggle="dropdown" href="#">
+                                        CONTACT
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <ul class="list-unstyled">
+                                            <li class="dropdown-item"><a href="#">Mb:8767875437</a></li>
+                                            <li class="dropdown-item"><a href="#">email:karlfashion@gmail.com</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                        <a href="#" class="help-line text-center text-decoration-none pt-2 pb-2 pl-4 pr-4">
+                            <i class="fas fa-headset">+87687885</i>
+                        </a>
+
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row mb-2 text-white div3 text-center">
+                        <div class="col-lg-4 div1 p-4">
+                            <h4>Free Shipping & Returns</h4>
+                            <p> BUY NOW</p>
+                        </div>
+                        <div class="col-lg-4 div2 p-4">
+                            <h4>20% Discount for all dresses</h4>
+                            <p>USE CODE: Colorlib</p>
+                        </div>
+                        <div class="col-lg-4 bg-dark p-4">
+                            <h4>30% Discount for students</h4>
+                            <p>USE CODE: Colorlib</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="container mt-4 mb-4">
+                        <a href="shope.html" class="text-decoration-none text-dark">
+                            <i class="fas fa-angle-double-left">Back to Shope</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-lg-6">
+
+
+                    <!-- Large Image -->
+                    <div class="main-image center mb-3">
+                        <img id="displayImage" src="images/img1.jpg" width="100%" alt="">
+                    </div>
+
+                    <!-- Small Images -->
+                    <div class="thumbnails text-center mb-3">
+                        <img src="images/img1.jpg" onclick="changeImage(this)">
+                        <img src="images/img2.jpg" onclick="changeImage(this)">
+                        <img src="images/img3.jpg" onclick="changeImage(this)">
+                        <img src="images/img4.jpg" onclick="changeImage(this)">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="container">
+                        <h4>Long Yellow Dress</h4>
+                        <h5>Rs.399</h5>
+                        <p><strong> Available:</strong> in stock</p>
+                    </div>
+                    <div class="container mt-2">
+                        <h6>SIZE</h6>
+                        <div>
+                            <button class="btn btn-outline-dark btn-white rounded-0 fw-bold">32</button>
+                            <button class="btn btn-outline-dark rounded-0 fw-bold">34</button>
+                            <button class="btn btn-outline-dark rounded-0 fw-bold">36</button>
+                            <button class="btn btn-outline-dark rounded-0 fw-bold">38</button>
+                            <button class="btn btn-outline-dark rounded-0 fw-bold">40</button>
+                            <button class="btn btn-outline-dark rounded-0 fw-bold">42</button>
+                        </div>
+                    </div>
+
+                    <div class="container mt-4">
+                        <input type="number" min="1" max="20" name="" id="" required value="1" step="1">
+                        <button type="submit" class="btn btn-danger ">ADD TO CART</button>
+                    </div>
+
+                    <div class="container mt-5" id="acc">
+                        <div class="acc">
+
+
+                            <div class="card mt-2">
+                                <div class="card-header">
+                                    <a href="#" class="card-link" data-toggle="collapse" data-target="#one">
+                                        INFORMATION
+                                    </a>
+                                </div>
+                                <div class="collapse show" id="one" data-parent="#acc">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor
+                                        so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id
+                                        te mpus. Ut consectetur lacus.
+
+                                        Approx length 66cm/26" (Based on a UK size 8 sample) Mixed fibres
+
+                                        The Model wears a UK size 8/ EU size 36/ US size 4 and her height is 5'8"
+                                    </div>
+                                </div>
+
+                                <div class="card mt-2">
+                                    <div class="card-header">
+                                        <a href="#" class="card-link" data-toggle="collapse" data-target="#two">
+                                            CARD DETAILS
+                                        </a>
+                                    </div>
+                                    <div class="collapse" id="two" data-parent="#acc">
+                                        <div class="card-body">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, debitis.
+                                            Laborum ipsum voluptas praesentium nihil cupiditate iure, consequuntur ab
+                                            dolores beatae, unde natus sapiente labore molestiae dolore facilis
+                                            explicabo
+                                            neque?
+                                            Debitis iusto incidunt obcaecati voluptatibus quidem porro commodi aperiam,
+                                            autem corrupti molestiae quam consequuntur omnis nulla blanditiis modi
+                                            adipisci
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card mt-2">
+                                    <div class="card-header">
+                                        <a href="#" class="card-link" data-toggle="collapse" data-target="#three">
+                                            SHIPPING AND RETURNS
+                                        </a>
+                                    </div>
+                                    <div class="collapse" id="three" data-parent="#acc">
+                                        <div class="card-body">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, debitis.
+                                            Laborum ipsum voluptas praesentium nihil cupiditate iure, consequuntur ab
+                                            dolores beatae, unde natus sapiente labore molestiae dolore facilis
+                                            explicabo
+                                            neque?
+                                            Debitis iusto incidunt obcaecati voluptatibus quidem porro commodi aperiam,
+                                            autem corrupti molestiae quam consequuntur omnis nulla blanditiis modi
+                                            adipisci
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="container mt-4 mb-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-center">RELATED PRODUCTS</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <marquee behaviour="slide" direction="left" loop="infinite" onmouseover="this.stop()" onmouseout="this.start()">
+
+                <div class="row d-flext overflow-auto">
+                    
+                    <div class="col-4" product m-0 p-0 id="man">
+                        <div class="product_details border border-light shadow ">
+                            <div class="overflow-hidden product_image">
+                                <img src="images/man1.jpg" width="100%" height="400px" alt="" class="zoom-img">
+                                
+                            </div>
+
+                            <p>Rs 350 <br> Jeans midi cocktail dress</p>
+                            <button class="btn btn-danger px-4 ml-3 mt-2 mb-2">
+                                <a href="#" class="text-white text-decoration-none">Add to Cart</a>
+                            </button>
+                            <button class="btn btn-danger px-5 mt-2 mb-2 ">
+                                <a href="" class="text-decoration-none text-white">SHOP NOW</a>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-4" product m-0 p-0 id="man">
+                        <div class="product_details border border-light shadow ">
+                            <div class="overflow-hidden product_image">
+                                <img src="images/man1.jpg" width="100%" height="400px" alt="" class="zoom-img">
+                                
+                            </div>
+
+                            <p>Rs 350 <br> Jeans midi cocktail dress</p>
+                            <button class="btn btn-danger px-4 ml-3 mt-2 mb-2">
+                                <a href="#" class="text-white text-decoration-none">Add to Cart</a>
+                            </button>
+                            <button class="btn btn-danger px-5 mt-2 mb-2 ">
+                                <a href="" class="text-decoration-none text-white">SHOP NOW</a>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-4" product m-0 p-0 id="man">
+                        <div class="product_details border border-light shadow ">
+                            <div class="overflow-hidden product_image">
+                                <img src="images/man1.jpg" width="100%" height="400px" alt="" class="zoom-img">
+                                
+                            </div>
+
+                            <p>Rs 350 <br> Jeans midi cocktail dress</p>
+                            <button class="btn btn-danger px-4 ml-3 mt-2 mb-2">
+                                <a href="#" class="text-white text-decoration-none">Add to Cart</a>
+                            </button>
+                            <button class="btn btn-danger px-5 mt-2 mb-2 ">
+                                <a href="" class="text-decoration-none text-white">SHOP NOW</a>
+                            </button>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </marquee>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row border-light shadow">
+                        <div class="col-lg-4">
+                            <img src="images/karllogo.png" alt="" class="mt-2">
+                            <p class="mt-5">
+                                Copyright ©2026 All rights reserved |<br> Made with by Colorlib & distributed by
+                                ThemeWagon
+                            </p>
+                        </div>
+
+                        <div class="col-lg-2">
+                            <ul class="list-unstyled ">
+                                <li><a href="" class="text-dark text-decoration-none">About</a></li>
+                                <li><a href="" class="text-dark text-decoration-none">Blog</a></li>
+                                <li><a href="" class="text-dark text-decoration-none">Faq</a></li>
+                                <li><a href="" class="text-dark text-decoration-none">Returns</a></li>
+                                <li><a href="" class="text-dark text-decoration-none">Contact</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-2">
+                            <ul class="list-unstyled text-dark">
+                                <li><a href="#" class="text-dark text-decoration-none">My Account</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">Shipping</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">Our Policies</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">Affiliates</a></li>
+
+
+
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <h3>Subscribe to our newsletter</h3>
+                            <input type="email" placeholder="your email here">
+
+                            <button type="submit" class="btn btn-dark">Subscribe</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 d-flex justify-content-center footer_icon ">
+
+
+                            <i class="fab fa-twitter mr-5"></i>
+
+                            <i class="fab fa-facebook mr-5"></i>
+
+                            <i class="fab fa-linkedin mr-5"></i>
+
+                            <i class="fab fa-whatsapp mr-5"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script>
+            function changeImage(img) {
+                document.getElementById("displayImage").src = img.src;
+            }
+        </script>
+    </div>
+</body>
+
+</html>
